@@ -10,11 +10,17 @@ export class counterApp extends DDDSuper(LitElement) {
   constructor() {
     super();
     this.title = "";
+    this.counter = "";
+    this.min = "10";
+    this.max = "25";
   }
 
   static get properties() {
     return {
       title: { type: String },
+      counter: { type: String },
+
+
     };
   }
 
@@ -43,6 +49,7 @@ export class counterApp extends DDDSuper(LitElement) {
     return html`
 <div class="wrapper">
   <div>${this.title}</div>
+  <div>${this.counter}</div>
   <slot></slot>
 </div>`;
   }
